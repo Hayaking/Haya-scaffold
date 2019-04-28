@@ -7,3 +7,15 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/imserver?useUnicode=true&characterEncoding=utf8&useSSL=true&serverTimezone=Asia/Shanghai
     username: root
     password: 1024
+
+socketio:
+  host: localhost
+  port: 9099
+  maxFramePayloadLength: 1048576
+  maxHttpContentLength: 1048576
+  bossCount: 1
+  workCount: 100
+  allowCustomRequests: true
+  upgradeTimeout: 1000000
+  pingTimeout: 6000000
+  pingInterval: 25000
