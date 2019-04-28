@@ -3,3 +3,4 @@
 - mybatis-plus 
 - shiro
 - lombok
+- netty-socket.io
