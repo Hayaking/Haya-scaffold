@@ -29,10 +29,10 @@ public class UserController {
         this.userService = userService;
     }
 
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Object login(@RequestBody User user) {
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public Object login(String account,String password) {
         Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken( user.getId() + "", user.getUserPassword() );
+        UsernamePasswordToken token = new UsernamePasswordToken( account,password );
         subject.login( token );
         boolean isLogin = subject.isAuthenticated();
         return isLogin
