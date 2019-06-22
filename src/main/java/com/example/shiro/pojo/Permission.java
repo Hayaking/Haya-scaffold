@@ -9,12 +9,10 @@ import lombok.Data;
  * @author haya
  */
 @Data
-@TableName("user")
-public class User {
+@TableName("permission")
+public class Permission {
     @TableId
     private int id;
-    @TableField("user_name")
-    private String userName;
-    @TableField("user_password")
-    private String userPassword;
+    @TableField("permissionName")
+    private String permissionName;
 }
